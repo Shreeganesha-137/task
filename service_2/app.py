@@ -3,6 +3,11 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 
+@app.route("/")
+def index():
+    return jsonify(message="Welcome to Service 2")
+
+
 @app.route("/ping")
 def ping():
     return jsonify(status="ok", service="2")
